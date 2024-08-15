@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .converter-container {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .history {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter-container">
+        <h2 class="text-center">Temperature Converter</h2>
+        <form id="converterForm">
+            <div class="mb-3">
+                <label for="tempInput" class="form-label">Enter Temperature</label>
+                <input type="number" class="form-control" id="tempInput" required>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="inputUnit" class="form-label">Input Unit</label>
+                    <select class="form-select" id="inputUnit">
+                        <option value="Celsius">Celsius</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                        <option value="Kelvin">Kelvin</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="targetUnit" class="form-label">Target Unit</label>
+                    <select class="form-select" id="targetUnit">
+                        <option value="Celsius">Celsius</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                        <option value="Kelvin">Kelvin</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-grid gap-2 mt-3">
+                <button type="submit" class="btn btn-primary">Convert</button>
+            </div>
+        </form>
+        <div class="output text-center" id="output"></div>
+        <div class="history" id="history"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
